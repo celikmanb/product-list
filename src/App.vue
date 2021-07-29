@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" style="display: inline-flex; float: right;">
+      <b-button class="langButton" v-for="lang in languages" :key="lang.info.code" @click="changeLang(lang.info.code)" > {{ lang.info.name }}</b-button>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import i18n from '@/plugins/i18n'
+export default {
+  data() {
+    return {
+      languages: Object.values(i18n.messages)
+    }
+  },
+  methods:{
+    changeLang: (lang) => {
+      localStorage.setItem( "lang", lang )
+      location.reload();
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,6 +31,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.langButton { 
+  margin-left: 3%;
 }
 
 #nav {

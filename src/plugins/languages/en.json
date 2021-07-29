@@ -1,0 +1,13 @@
+{
+  "info":{
+    "name": "English",
+    "code": "en"
+  },
+  "mainTitle": "Product List",
+  "detailTitle": "Product Detail",
+  "back": "Back",
+  "notFound": "This page not found",
+  "homePage": "Home Page",
+  "price": "Price",
+  "detail": "Detail"
+}

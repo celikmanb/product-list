@@ -1,0 +1,13 @@
+{
+  "info":{
+    "name": "Türkçe",
+    "code": "tr"
+  },
+  "mainTitle": "Ürün Listesi",
+  "detailTitle": "Ürün Detayı",
+  "back": "Geri",
+  "notFound": "Bu sayfa bulunamadı",
+  "homePage": "Anasayfa",
+  "price": "Fiyat",
+  "detail": "Detay"
+}
